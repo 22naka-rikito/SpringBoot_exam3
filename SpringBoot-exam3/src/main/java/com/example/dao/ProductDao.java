@@ -11,4 +11,6 @@ public interface ProductDao {
     public List<Product> findByPrice(Integer price);
     public List<Product> findByNamePrice(String productName, Integer price);
     public void insertProduct(String productName, Integer price);
+    public void deleteProduct(Integer productId);
+    public void updateProduct(Integer productId, String productName, Integer price);
 }

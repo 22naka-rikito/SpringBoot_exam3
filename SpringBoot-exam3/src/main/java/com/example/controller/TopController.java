@@ -10,7 +10,9 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.example.controller.form.DeleteForm;
 import com.example.controller.form.TopForm;
+import com.example.controller.form.UpdateForm;
 import com.example.entity.Product;
 import com.example.service.ProductService;
 
@@ -51,11 +53,17 @@ public class TopController {
 		if (bindingResult.hasErrors()) {
             return "top";
         }
-		System.out.println("2");
-		productService.insertProduct(form.getProductName(), form.getPrice());
-		System.out.println("3");
-		List<Product> list = productService.findAll();
-		model.addAttribute("list", list);
+		productService.insertProduct(form.getProductName(),form.getPrice());
 		return "insertResult";
+	}
+	
+	@RequestMapping( value="/searchResult", params = "delete" )
+	public String delete(@ModelAttribute("delete") DeleteForm form, Model model) {
+		return "delete";
+	}
+	
+	@RequestMapping( value="/searchResult", params = "update" )
+	public String update(@ModelAttribute("update") UpdateForm form, Model model) {
+		return "update";
 	}
 }

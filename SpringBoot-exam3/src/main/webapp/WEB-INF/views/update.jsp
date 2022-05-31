@@ -9,15 +9,20 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>検索</title>
+<title>結果</title>
 </head>
 <body>
-	<h1>検索条件または登録情報を入力して下さい</h1>
+	<h1>削除対象のproduct_idを入力してください</h1>
 	<c:if test="${not empty msg}">
 		<fmt:message key="form.lbl.msg" />
 	</c:if>
-	<form:form action="searchResult" modelAttribute="top" method="post">
+	<form:form action="updateResult" modelAttribute="update" method="post">
 		<div>
+			<p>
+				<label><fmt:message key="form.lbl.product_id" /></label>
+				<form:input path="productId" />
+				<form:errors path="productId" cssStyle="color: red" />
+			</p>
 			<p>
 				<label><fmt:message key="form.lbl.name" /></label>
 				<form:input path="productName" />
@@ -29,17 +34,10 @@
 				<form:errors path="price" cssStyle="color: red" />
 			</p>
 		</div>
-		<form:button name="find">
-			<fmt:message key="form.lbl.find" />
-		</form:button>
-		<form:button name="insert">
-			<fmt:message key="form.lbl.insert" />
-		</form:button>
-		<form:button name="delete">
-			<fmt:message key="form.lbl.delete" />
-		</form:button>
 		<form:button name="update">
 			<fmt:message key="form.lbl.update" />
 		</form:button>
 	</form:form>
+	<a href="top"><fmt:message key="form.lbl.back" /></a>
+
 </body>

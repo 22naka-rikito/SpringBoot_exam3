@@ -12,4 +12,6 @@ public interface ProductService {
     public List<Product> findByPrice(Integer price);
     public List<Product> findByNamePrice(String productName, Integer price);
     public void insertProduct(String productName, Integer price);
+    public boolean deleteProduct(Integer productId);
+    public boolean updateProduct(Integer productId, String productName, Integer price);
 }
