@@ -1,18 +1,16 @@
 package com.example.controller.form;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+
 public class TopForm {
-    private Integer productId;
+//    private Integer productId;
+	@NotBlank
     private String productName;
+	
+	@NotNull
 	private Integer price;
 
-    public Integer getProductId() {
-        return productId;
-    }
-
-    public void setProductId(Integer productId) {
-        this.productId = productId;
-    }
-    
     public String getProductName() {
 		return this.productName;
 	}
