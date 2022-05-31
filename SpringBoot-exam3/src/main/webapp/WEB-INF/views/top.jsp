@@ -14,9 +14,16 @@
 	<p>検索条件を入力して下さい</p>
 	<form:form action="searchResult" modelAttribute="top" method="post">
 		<div>
-			<label>product_id</label>
-			<form:input path="productId" />
+			<p>
+				<label>product_name</label>
+				<form:input path="productName" />
+			</p>
+			<p>
+				<label>price</label>
+				<form:input path="price" />
+			</p>
 		</div>
-		<form:button>検索</form:button>
+		<form:button name="find">検索</form:button>
+		<form:button name="insert">登録</form:button>
 	</form:form>
 </body>

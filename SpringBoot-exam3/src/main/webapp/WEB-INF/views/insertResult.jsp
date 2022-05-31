@@ -11,7 +11,7 @@
 <title>結果</title>
 </head>
 <body>
-	<p>検索結果</p>
+	<p>登録が完了しました</p>
 	<table border="1">
 		<tr>
 			<th>product_id</th>
@@ -26,24 +26,6 @@
 			</tr>
 		</c:forEach>
 	</table>
-<!-- 	<p> -->
-<!-- 		product_id: -->
-<%-- 		<c:if test="${not empty product.productId}"> --%>
-<%-- 			${fn:escapeXml(product.productId)} --%>
-<%-- 		</c:if> --%>
-<!-- 	</p> -->
-<!-- 	<p> -->
-<!-- 		product_name: -->
-<%-- 		<c:if test="${not empty product.productName}"> --%>
-<%-- 			${fn:escapeXml(product.productName)} --%>
-<%-- 		</c:if> --%>
-<!-- 	</p> -->
-<!-- 	<p> -->
-<!-- 		price: -->
-<%-- 		<c:if test="${not empty product.price}"> --%>
-<%-- 			${fn:escapeXml(product.price)} --%>
-<%-- 		</c:if> --%>
-<!-- 	</p> -->
 		<a href="top">戻る</a>
 
 </body>
